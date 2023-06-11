@@ -1,4 +1,4 @@
-function PopupImage ({ card, isOpen, onClose }) {
+function ImagePopup ({ card, isOpen, onClose }) {
   return (
     <section
       aria-label="Place-image"
@@ -17,4 +17,4 @@ function PopupImage ({ card, isOpen, onClose }) {
   );
 }
 
-export default PopupImage;
+export default ImagePopup;
