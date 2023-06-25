@@ -1,4 +1,4 @@
-import useFormValidation from "../../utils/useFormValidation.js";
+import useFormValidation from "../../hooks/useFormValidation.js";
 import PopupWithForm from "../popupWithForm/PopupWithForm.jsx";
 
 function AddPlacePopup ({ isOpen, onClose, onAddPlace, isSending }) {

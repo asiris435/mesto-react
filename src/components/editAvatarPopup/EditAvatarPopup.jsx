@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useFormValidation from "../../utils/useFormValidation.js";
+import useFormValidation from "../../hooks/useFormValidation.js";
 import PopupWithForm from "../popupWithForm/PopupWithForm.jsx";
 
 function EditAvatarPopup ({ isOpen, onClose, onUpdateAvatar, isSending }) {
