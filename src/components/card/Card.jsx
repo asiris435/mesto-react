@@ -1,4 +1,10 @@
-function Card ({ card, onCardClick }) {
+import { useContext } from "react";
+import CurrentUserContext from "../../contexts/CurrentUserContext.js";
+import LikeButton from "../likeButton/LikeButton.jsx";
+
+function Card ({ card, onCardClick, onClickDelete }) {
+    const currentUser = useContext(CurrentUserContext);
+    
     return (
         <li className="elements__card">
             <img 
@@ -7,11 +13,10 @@ function Card ({ card, onCardClick }) {
                 alt={`Изображение ${card.name}`} 
                 onClick={() => onCardClick({name: card.name, link: card.link})}
             />
-            <button aria-label="Delete" type="button" className="elements__delete-button" />
+            {currentUser._id === card.owner._id && <button aria-label="Delete" type="button" className="elements__delete-button" onClick={() => onClickDelete(card._id)}/>}
             <div className="elements__groupe">
                 <h2 className="elements__title">{card.name}</h2>
-                <button aria-label="Like" type="button" className="elements__like-button" />
-                <span className="elements__counter">{card.likes.length}</span>
+                <LikeButton likes={card.likes} myId={currentUser._id} cardId={card._id}/>
             </div>
         </li>
     );
