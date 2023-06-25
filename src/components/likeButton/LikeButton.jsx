@@ -29,8 +29,8 @@ function LikeButton ({ likes, myId, cardId }) {
 
     return (
         <>
-        <button aria-label="Like" type="button" className={`elements__like-button ${isLiked ? "elements__like-button_active" : ""}`} onClick={handleCardLike}/>
-        <span className="elements__counter">{count}</span>
+            <button aria-label="Like" type="button" className={`elements__like-button ${isLiked ? "elements__like-button_active" : ""}`} onClick={handleCardLike}/>
+            <span className="elements__counter">{count}</span>
         </>
     );
 }
